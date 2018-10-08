@@ -1,6 +1,7 @@
 @import "settings";
 @import "typography";
 
+
 .footer {
 	&__social, &__linksSection{
 		padding: 0;
@@ -120,5 +121,124 @@
 	width: 100%;
 	@media only screen and (max-width: 991px) {
 		font-size: 20px;
+	}
+}
+
+.header {
+	opacity: 0.85;
+  	background-color: #ffffff;
+  	&-row-wrapper {
+  		display: flex;
+  		align-items: center;
+  	}
+  	&-link {
+  		display: inline-block;
+  	}
+  	&-logo-img {
+		width: 128px;
+		height: 55px;
+		object-fit: contain;
+  	}
+	&-top-menu {
+		text-align: right;
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			li {
+				padding: 15px;
+				&:last-child {
+					opacity: 0.85;
+					background-color: #171515;
+				}
+			}
+			a {
+				font-size: 12px;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: -0.2px;
+				color: #000000;
+			}
+			.icon {
+				object-fit: contain;
+				font-family: FontAwesome;
+				font-size: 28px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: -0.3px;
+				color: #ffffff;
+				-webkit-text-stroke: 1px #252424;
+			}
+		}
+	}
+	&-utility-menu {
+		text-align: right;
+		opacity: 0.85;
+		background-color: #171515;
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			&.dropdown-menu {
+				display: none;
+				margin: 0;
+				padding: 0;
+				li {
+					display: block;
+					padding: 0;
+					background-color: #f2f2f2;
+					&:hover {
+						color: #ffffff;
+						background-color: #00c3ce;
+						a {
+							color: #000000;
+							&:hover {
+								color: #ffffff;
+								background-color: #00c3ce;
+							}
+						}
+					}
+					a {
+						padding: 10px 0;
+						white-space: normal;
+						color: #000000;
+					}
+					.caret {
+						margin: 0 auto;
+						position: absolute;
+						margin-top: 2px;	
+					}
+				}
+			}
+			li {
+				a:hover {
+					background-color: #f2f2f2;
+					color: #000000;
+				}
+				&.active-list {
+					width: 100%;
+					height: 6px;
+					background-color: #00c3ce;
+					box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+				}
+			}
+			a {
+				font-size: 14px;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: -0.3px;
+				text-align: center;
+				color: #ffffff;
+				text-transform: uppercase;
+				padding: 20px 15px;
+				display: inline-block;
+			}
+		}
 	}
 }
